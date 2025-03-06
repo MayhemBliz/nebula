@@ -1,0 +1,17 @@
+{
+    "name": "acf/logos",
+    "title": "Logos",
+    "description": "A custom block which outputs a row of logos.",
+    "category": "layout",
+    "icon": "admin-site",
+    "keywords": ["logos", "partners", "clients"],
+    "supports": {
+        "align": false,
+        "mode": "preview"
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "logos.php"
+    },
+    "style": "tailwind"
+}

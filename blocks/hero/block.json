@@ -1,0 +1,17 @@
+{
+    "name": "acf/hero",
+    "title": "Hero",
+    "description": "A custom hero block with heading, subheading, and background image.",
+    "category": "layout",
+    "icon": "admin-site",
+    "keywords": ["hero", "banner"],
+    "supports": {
+        "align": false,
+        "mode": "preview"
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "hero.php"
+    },
+    "style": "tailwind"
+}

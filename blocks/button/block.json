@@ -1,0 +1,17 @@
+{
+    "name": "acf/button",
+    "title": "Button",
+    "description": "A custom button.",
+    "category": "layout",
+    "icon": "format-quote",
+    "keywords": ["button"],
+    "supports": {
+        "align": false,
+        "mode": "preview"
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "button.php"
+    },
+    "style": "tailwind"
+}

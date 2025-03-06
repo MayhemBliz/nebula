@@ -1,0 +1,23 @@
+{
+	"version": 1,
+	"settings": {
+		"layout": {
+			"contentSize": "95%",
+			"wideSize": "95%"
+		},
+		"color": {
+			"defaultPalette": false,
+			"custom": false,
+			"customGradient": false,
+			"gradients": [],
+			"defaultGradients": false,
+			"palette": [
+				{
+					"name": "Grey",
+					"slug": "grey",
+					"color": "#EFF3F5"
+				}
+			]
+		}
+	}
+}

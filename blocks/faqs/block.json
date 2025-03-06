@@ -1,0 +1,17 @@
+{
+    "name": "acf/faqs",
+    "title": "FAQs",
+    "description": "A custom block which outputs your faqs.",
+    "category": "layout",
+    "icon": "admin-site",
+    "keywords": ["faqs", "faq", "frequently asked questions"],
+    "supports": {
+        "align": false,
+        "mode": "preview"
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "faqs.php"
+    },
+    "style": "tailwind"
+}

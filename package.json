@@ -1,0 +1,25 @@
+{
+  "name": "nebula",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "type theme-header.css > style.css && postcss tailwind.css >> style.css",
+    "dev": "concurrently \"postcss tailwind.css -o style.css --watch\" \"npx browser-sync start --config bs-config.js\" \"npx eslint js --ext .js --config eslint.config.mjs\"",
+    "lint": "npx eslint js --ext .js --config eslint.config.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "autoprefixer": "^10.4.20",
+    "browser-sync": "^3.0.3",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.21.0",
+    "globals": "^16.0.0",
+    "postcss": "^8.4.47",
+    "prettier": "^3.5.3",
+    "tailwindcss": "^3.4.14"
+  }
+}

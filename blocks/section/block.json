@@ -1,0 +1,20 @@
+{
+    "name": "acf/section",
+    "title": "Section",
+    "description": "A wrapper block for creating customizable sections with background color, padding, and container options.",
+    "category": "layout",
+    "icon": "editor-table",
+    "keywords": ["section", "container", "layout"],
+    "supports": {
+        "align": false,
+        "mode": "preview",
+        "customClassName": true
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "section.php"
+    },
+    "script": "acf-section-block",
+    "style": "tailwind",
+    "allowedBlocks": ["core/columns", "core/paragraph", "core/image", "core/heading", "core/list"]
+}
