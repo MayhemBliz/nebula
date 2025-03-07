@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header(null, ['has_hero' => true]); ?>
 
 <?php get_template_part('blocks/hero/hero', null, [
     'title' => 'Insights',

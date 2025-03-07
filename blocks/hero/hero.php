@@ -7,17 +7,17 @@ $current_id = isset($post->ID) ? $post->ID : null;
 
 ?>
 
-<section class="hero relative <?php echo (($current_id === (int)get_option('page_on_front')) ? 'h-95vh' : 'min-h-500'); 
-?> flex items-center pt-28 overflow-hidden">
+<section class="hero relative <?php echo (($current_id === (int)get_option('page_on_front')) ? 'h-90vh' : 'min-h-500'); 
+?> flex items-center pt-60 pb-20 overflow-hidden">
         <div class="relative container z-10 h-full flex flex-col">
             <div class="flex flex-col h-full items-center">
                 <div class="flex w-full h-full items-center">
                     <div class="flex flex-col min-w-1/2">
-                        <?php if (get_field('hero_title') ?: get_the_excerpt()): ?>
-                            <h1 class="text-4xl md:text-8xl lg:text-9xl font-bold text-primary mb-8"><?php echo esc_html($args['title'] ?? get_field('hero_title') ?? get_the_title()); ?></h1>
+                        <?php if (!empty($args['title']) || get_field('hero_title')): ?>
+                            <h1 class="text-4xl lg:text-6xl font-bold text-white mb-8"><?php echo esc_html($args['title'] ?? get_field('hero_title') ?? get_the_title()); ?></h1>
                         <?php endif; ?>
-                        <?php if (get_field('hero_summary') ?: get_the_excerpt()): ?>
-                            <p class="text-lg text-primary block mb-8"><?php echo nl2br(esc_html($args['summary'] ?? get_field('hero_summary') ?: get_the_excerpt())); ?></p>
+                        <?php if (!empty($args['summary']) || get_field('hero_summary')): ?>
+                            <p class="text-lg text-white block mb-8"><?php echo nl2br(esc_html($args['summary'] ?? get_field('hero_summary') ?: get_the_excerpt())); ?></p>
                         <?php endif; ?>
                         <?php 
                         $link = get_field('link'); 

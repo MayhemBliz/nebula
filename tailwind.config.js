@@ -24,7 +24,8 @@ module.exports = {
         white: '#ffffff'
       },
       height: {
-        '820': '820px'
+        '820': '820px',
+        '90vh': '90vh'
       },
       minWidth: {
         '1/2': '50%'

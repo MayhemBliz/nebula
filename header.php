@@ -12,8 +12,7 @@
 <body <?php body_class('min-h-screen flex flex-col'); ?>>
 
     <!-- Insert Google Tag Manager (noscript) -->
-
-    <header class="fixed h-40 w-full z-50 <?php echo has_block('acf/hero') ? '' : 'bg-black'; ?>">
+    <header class="fixed h-40 w-full z-50 <?php echo (has_block('acf/hero') || ($args['has_hero'] ?? false)) ? '' : 'bg-black'; ?>">
         <div class="container flex flex-col py-6">
             <div class="flex justify-between gap-6">
                 <div class="w-32 h-8">
