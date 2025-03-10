@@ -25,7 +25,6 @@ add_filter('rest_authentication_errors', 'restrict_rest_api_access');
 
 // Disable theme and plugin file editing from the admin panel
 define('DISALLOW_FILE_EDIT', true);
-define('DISALLOW_FILE_MODS', true);
 
 // Enforce Content Security Policy (CSP) headers
 function add_csp_headers() {
@@ -40,11 +39,6 @@ function remove_version_strings($src) {
 add_filter('script_loader_src', 'remove_version_strings');
 add_filter('style_loader_src', 'remove_version_strings');
 
-// Sanitize and validate user inputs
-function sanitize_custom_inputs($input) {
-    return sanitize_text_field($input);
-}
-add_filter('sanitize_text_field', 'sanitize_custom_inputs');
 
 // Remove support for comments in posts and pages
 function disable_comments_support() {
@@ -66,21 +60,29 @@ function remove_comments_from_admin_bar($wp_admin_bar) {
 add_action('admin_bar_menu', 'remove_comments_from_admin_bar', 999);
 
 // Allow SVG uploads
-function enable_svg_upload($mimes) {
+function enable_secure_svg_upload($mimes) {
     $mimes['svg'] = 'image/svg+xml';
     return $mimes;
 }
-add_filter('upload_mimes', 'enable_svg_upload');
+add_filter('upload_mimes', 'enable_secure_svg_upload');
 
-// Validate SVG file type
-function check_svg_filetype_and_ext($data, $file, $filename, $mimes) {
-    $ext = pathinfo($filename, PATHINFO_EXTENSION);
-
-    if ($ext === 'svg') {
-        $data['ext'] = 'svg';
-        $data['type'] = 'image/svg+xml';
+function sanitize_svg_upload($data, $file, $filename, $mimes) {
+    $file_ext = pathinfo($filename, PATHINFO_EXTENSION);
+    
+    if ($file_ext === 'svg') {
+        // Only allow SVGs that are sanitized
+        if (!class_exists('SVG_Sanitizer')) {
+            include_once get_template_directory() . '/inc/class-svg-sanitizer.php';
+        }
+        
+        $sanitizer = new SVG_Sanitizer();
+        $sanitized_svg = $sanitizer->sanitize(file_get_contents($file));
+        
+        if (!$sanitized_svg) {
+            return new WP_Error('svg_sanitize_failed', __('SVG file contains unsafe content.', 'text-domain'));
+        }
     }
-
+    
     return $data;
 }
-add_filter('wp_check_filetype_and_ext', 'check_svg_filetype_and_ext', 10, 4);
+add_filter('wp_check_filetype_and_ext', 'sanitize_svg_upload', 10, 4);
