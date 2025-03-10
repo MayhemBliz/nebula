@@ -2,8 +2,8 @@
 module.exports = {
   content: [
     './*.php',
-    './**/*.php',
     './blocks/**/*.php',
+    './template-parts/**/*.php',
   ],
   safelist: [
     'bg-white',

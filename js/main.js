@@ -21,7 +21,7 @@
         const getBreakpoint = function() {
             return window
                 .getComputedStyle(document.body, ":before")
-                .content.replace(/\"/g, "");
+                .content.replace(/"/g, "");
         };
 
         // Calculate breakpoint on page load
@@ -123,7 +123,7 @@
     
         let isInputFocused = false; // Track input focus status
     
-        searchButton.addEventListener("click", function (event) {
+        searchButton.addEventListener("click", function () {
             // Use your breakpoint function to check if the current viewport is desktop
             if (breakpoint() === "xl" || breakpoint() === "lg") {
                 if (!isInputFocused) {
