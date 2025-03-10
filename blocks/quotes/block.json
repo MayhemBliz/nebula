@@ -3,7 +3,7 @@
     "title": "Quotes",
     "description": "A custom block which outputs your quotes.",
     "category": "layout",
-    "icon": "admin-site",
+    "icon": "editor-quote",
     "keywords": ["quotes", "quote", "review", "testimonial"],
     "supports": {
         "align": false,

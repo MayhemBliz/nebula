@@ -27,7 +27,8 @@
                 <h3 class="text-xl font-bold">Services</h3>
                 <?php wp_nav_menu(array(
                     'theme_location' => 'services',
-                    'menu_class' => 'space-y-2'
+                    'menu_class' => 'space-y-4',
+                    'container' => false
                 )); ?>
             </div>
 
@@ -75,7 +76,8 @@
                 <h3 class="text-xl font-bold">Policies</h3>
                 <?php wp_nav_menu(array(
                     'theme_location' => 'policies',
-                    'menu_class' => 'space-y-2'
+                    'menu_class' => 'space-y-4',
+                    'container' => false
                 )); ?>
             </div>
 

@@ -3,8 +3,8 @@
     "title": "Button",
     "description": "A custom button.",
     "category": "layout",
-    "icon": "format-quote",
-    "keywords": ["button"],
+    "icon": "button",
+    "keywords": ["button, cta"],
     "supports": {
         "align": false,
         "mode": "preview"

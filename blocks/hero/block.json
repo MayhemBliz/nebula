@@ -3,7 +3,7 @@
     "title": "Hero",
     "description": "A custom hero block with heading, subheading, and background image.",
     "category": "layout",
-    "icon": "admin-site",
+    "icon": "cover-image",
     "keywords": ["hero", "banner"],
     "supports": {
         "align": false,

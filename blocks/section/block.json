@@ -16,5 +16,5 @@
     },
     "script": "acf-section-block",
     "style": "tailwind",
-    "allowedBlocks": ["core/columns", "core/paragraph", "core/image", "core/heading", "core/list"]
+    "allowedBlocks": ["acf/button", "core/columns", "core/paragraph", "core/image", "core/heading", "core/list"]
 }

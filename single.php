@@ -1,10 +1,8 @@
 <?php get_header(); ?>
 
-<?php get_template_part('blocks/hero/hero', null, array('variation' => 'narrow')); ?>
-
 <main class="flex-1">
 
-    <div class="breadcrumbs py-3 border-b border-grey ">
+    <div class="breadcrumbs pt-44 pb-4 border-b border-grey ">
         <div class="container">
             <a class="text-primary font-bold underline" href="/insights">Insights</a> »
             <span class="text-primary font-bold"><?php the_title(); ?></span>

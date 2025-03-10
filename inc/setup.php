@@ -34,6 +34,7 @@ function register_menus() {
         array(
             'top' => __( 'Top Menu' ),
             'primary' => __( 'Primary Menu' ),
+            'services' => __( 'Services Menu' ),
             'policies' => __( 'Policies Menu' )
         )
     );

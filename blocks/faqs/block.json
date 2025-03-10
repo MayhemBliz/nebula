@@ -3,7 +3,7 @@
     "title": "FAQs",
     "description": "A custom block which outputs your faqs.",
     "category": "layout",
-    "icon": "admin-site",
+    "icon": "editor-help",
     "keywords": ["faqs", "faq", "frequently asked questions"],
     "supports": {
         "align": false,
