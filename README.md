@@ -101,6 +101,23 @@ npm run build
 ### 7️⃣ **Activate the Theme**
 - Activate it in **WordPress Admin → Appearance → Themes**
 
+## 🔌 Recommended Plugins
+To get the best experience with Nebula, we recommend installing the following plugins:
+
+| Plugin | Purpose | Required? |
+|---------|---------|------------|
+| [**Advanced Custom Fields (ACF)**](https://wordpress.org/plugins/advanced-custom-fields/) | Manages custom fields & ACF Blocks | ✅ **Required** |
+| [**CookieYes**](https://wordpress.org/plugins/cookie-law-info/) | Manages cookie consent for GDPR compliance | 🔹 Recommended |
+| [**LiteSpeed Cache**](https://wordpress.org/plugins/litespeed-cache/) | Improves website performance with caching | 🔹 Recommended |
+| [**Redirection**](https://wordpress.org/plugins/redirection/) | Manages 301 redirects & tracks 404 errors | 🔹 Recommended |
+| [**Sucuri Security**](https://wordpress.org/plugins/sucuri-scanner/) | Enhances website security & monitors threats | 🔹 Recommended |
+| [**Wordfence Security**](https://wordpress.org/plugins/wordfence/) | Provides firewall & malware protection | 🔹 Recommended |
+| [**WP Mail SMTP**](https://wordpress.org/plugins/wp-mail-smtp/) | Ensures emails send properly from WordPress | 🔹 Recommended |
+| [**WP Forms**](https://wordpress.org/plugins/wpforms-lite/) | User-friendly form builder for WordPress | 🔹 Recommended |
+| [**Yoast SEO**](https://wordpress.org/plugins/wordpress-seo/) | Improves search engine optimization | 🔹 Recommended |
+
+**ACF is required.** The theme will not function correctly without it.
+
 ## ⚡ Usage
 ### 🔹 Custom ACF Blocks
 Nebula includes an **ACF block system** for building flexible layouts. Blocks are stored in:
