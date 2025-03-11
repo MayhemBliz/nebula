@@ -1,3 +1,13 @@
+/*
+    Theme Name: Nebula
+    Author: Sean Palmer
+    Author URI: https://seanp.co.uk
+    Description: A custom WordPress boilerplate theme developed for flexibility and performance.
+    Version: 1.0
+    License: MIT
+    License URI: https://opensource.org/licenses/MIT
+*/
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -1148,6 +1158,11 @@ header.sticky {
   transition-duration: 1000ms;
 }
 
+sectionheader.sticky {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 header.sticky input::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1187,6 +1202,16 @@ main section:first-of-type {
 
 section.bg-white + section.bg-white, section.bg-lightGrey + section.bg-lightGrey {
   padding-top: 0px;
+}
+
+section.bg-black {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+section.bg-grey {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .wp-block-columns {

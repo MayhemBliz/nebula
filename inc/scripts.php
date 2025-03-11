@@ -2,8 +2,8 @@
 
 // Enqueue Tailwind CSS & other styles
 function theme_enqueue_styles() {
-    wp_enqueue_style('theme-style', get_stylesheet_uri()); // Default WP style.css
-    wp_enqueue_style('tailwind', get_template_directory_uri() . '/style.css'); // Tailwind styles
+    wp_enqueue_style('theme-style', get_stylesheet_uri(), [], filemtime(get_stylesheet_directory() . '/style.css'));
+    wp_enqueue_style('tailwind', get_template_directory_uri() . '/style.css', [], filemtime(get_template_directory() . '/style.css'));
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');

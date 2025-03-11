@@ -134,6 +134,14 @@ section.bg-white + section.bg-white, section.bg-lightGrey + section.bg-lightGrey
     @apply pt-0;
 }
 
+section.bg-black {
+    @apply text-white;
+}
+
+section.bg-grey {
+    @apply text-white;
+}
+
 .wp-block-columns {
     @apply mb-0;
 }
