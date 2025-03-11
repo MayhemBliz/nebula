@@ -59,3 +59,9 @@ function register_page_template() {
     }
 }
 add_action('init', 'register_page_template');
+
+// Load ACF JSON from theme
+add_filter('acf/settings/load_json', function($paths) {
+    $paths[] = get_template_directory() . '/acf-json';
+    return $paths;
+});

@@ -118,6 +118,16 @@ To get the best experience with Nebula, we recommend installing the following pl
 
 **ACF is required.** The theme will not function correctly without it.
 
+## 🛠️ ACF Field Groups
+If the field groups do not load automatically from the `acf-json` folder, you can manually import them:
+
+1. Navigate to **Custom Fields > Tools** in the WordPress admin.
+2. Click on **Import Field Groups**.
+3. Select the JSON file located in the theme's `acf-json` folder.
+4. Click **Import** to manually load the field groups.
+
+This should ensure all custom fields are properly loaded and functional.
+
 ## ⚡ Usage
 ### 🔹 Custom ACF Blocks
 Nebula includes an **ACF block system** for building flexible layouts. Blocks are stored in:
