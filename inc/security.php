@@ -86,3 +86,11 @@ function sanitize_svg_upload($data, $file, $filename, $mimes) {
     return $data;
 }
 add_filter('wp_check_filetype_and_ext', 'sanitize_svg_upload', 10, 4);
+
+// Remove tools menu for editors
+function remove_tools_menu_for_editors() {
+    if (current_user_can('editor')) {
+        remove_menu_page('tools.php');
+    }
+}
+add_action('admin_menu', 'remove_tools_menu_for_editors');
