@@ -23,4 +23,10 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
         }
     }
+
+    document.querySelectorAll(".faq-header").forEach((header) => {
+        header.addEventListener("click", function () {
+            toggleFAQ(this);
+        });
+    });
 });

@@ -1,3 +1,25 @@
+// Load Swiper.js dynamically if not already loaded
+if (typeof Swiper === "undefined") {
+    let script = document.createElement("script");
+    script.src = "https://unpkg.com/swiper/swiper-bundle.min.js";
+    script.onload = function () {
+        console.log("Swiper.js loaded dynamically");
+        initializeSwiper();
+    };
+    document.head.appendChild(script);
+} else {
+    initializeSwiper();
+}
+
+// Load Swiper CSS dynamically if not already present
+if (!document.querySelector('link[href="https://unpkg.com/swiper/swiper-bundle.min.css"]')) {
+    let style = document.createElement("link");
+    style.rel = "stylesheet";
+    style.href = "https://unpkg.com/swiper/swiper-bundle.min.css";
+    style.type = "text/css";
+    document.head.appendChild(style);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // Look for all instances of the Swiper container within your quotes block.
     var quoteSliders = document.querySelectorAll('.swiper-container');

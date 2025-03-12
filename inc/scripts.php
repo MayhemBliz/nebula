@@ -37,3 +37,40 @@ function my_theme_editor_enqueue() {
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 }
 add_action('enqueue_block_editor_assets', 'my_theme_editor_enqueue');
+
+// Enqueue ACF block scripts
+function enqueue_acf_block_scripts() {
+    if (!is_singular()) {
+        return; // Only enqueue scripts on singular pages (posts, pages, CPTs)
+    }
+
+    $blocks = glob(get_template_directory() . '/blocks/*', GLOB_ONLYDIR);
+    $used_blocks = [];
+
+    $post = get_post();
+    if ($post) {
+        $content = $post->post_content;
+
+        foreach ($blocks as $block_dir) {
+            $block_name = basename($block_dir);
+            if (has_block("acf/{$block_name}", $post)) {
+                $used_blocks[] = $block_name;
+            }
+        }
+    }
+
+    foreach ($used_blocks as $block_name) {
+        $script_path = get_template_directory() . "/blocks/{$block_name}/edit.js";
+
+        if (file_exists($script_path)) {
+            wp_enqueue_script(
+                "acf-block-{$block_name}-js",
+                get_template_directory_uri() . "/blocks/{$block_name}/edit.js",
+                array('jquery'),
+                null,
+                true
+            );
+        }
+    }
+}
+add_action('wp_enqueue_scripts', 'enqueue_acf_block_scripts');

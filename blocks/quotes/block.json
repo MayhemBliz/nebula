@@ -14,5 +14,5 @@
         "renderTemplate": "quotes.php"
     },
     "style": "tailwind",
-    "script": "file:./quotes.js"
+    "script": "file:./edit.js"
 }

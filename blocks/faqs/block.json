@@ -13,5 +13,6 @@
         "mode": "preview",
         "renderTemplate": "faqs.php"
     },
-    "style": "tailwind"
+    "style": "tailwind",
+    "script": "file:./edit.js"
 }

@@ -65,8 +65,7 @@ if ($faq_query->have_posts()) :
                             ];
                     ?>
                         <li class="faq-item pb-4">
-                            <h4 class="faq-header shadow-lg p-6 hover:cursor-pointer hover:bg-primary hover:text-white flex justify-between items-center transition"
-                                onclick="toggleFAQ(this)">
+                            <h4 class="faq-header shadow-lg p-6 hover:cursor-pointer hover:bg-primary hover:text-white flex justify-between items-center transition">
                                 <?php echo esc_html($question); ?>
                                 <span class="faq-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" class="bi bi-plus" viewBox="0 0 16 16">
